@@ -59,15 +59,15 @@ export default function Hero() {
                 </motion.div>
 
                 <motion.div variants={itemVariants} className="flex items-center gap-4 mb-3">
-                  <div className="relative flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-[#00D4FF]/10 border border-[#00D4FF]/30 shadow-[0_0_25px_rgba(0,212,255,0.4)]">
-                    <Shield className="text-[#00D4FF] w-6 h-6 sm:w-8 sm:h-8" />
-                  </div>
-                  <h1 className="font-display text-5xl sm:text-7xl lg:text-[80px] leading-[0.9] tracking-tight font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#3B82F6] drop-shadow-[0_0_15px_rgba(0,212,255,0.4)]">
+                  <h1 className="font-display text-5xl sm:text-7xl lg:text-[80px] leading-[0.9] tracking-tight font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#3B82F6] drop-shadow-[0_0_15px_rgba(0,212,255,0.4)] flex items-center gap-4">
+                    <div className="relative flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-[#00D4FF]/10 border border-[#00D4FF]/30 shadow-[0_0_25px_rgba(0,212,255,0.4)]">
+                      <Shield className="text-[#00D4FF] w-6 h-6 sm:w-8 sm:h-8" />
+                    </div>
                     Austin BC
                   </h1>
                 </motion.div>
 
-                <motion.h2 
+                <motion.h2
                   variants={itemVariants}
                   className="font-body text-lg sm:text-xl text-[#A0A8B8]"
                 >
@@ -127,21 +127,21 @@ export default function Hero() {
                   <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
                   <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
                 </div>
-                <div className="flex-1 text-center font-mono text-xs text-[#A0A8B8] opacity-80">
+                <div className="flex-1 text-center font-mono text-sm text-[#A0A8B8] opacity-80">
                   austin@security-engineer:~
                 </div>
               </div>
               {/* Terminal Body */}
-              <div className="p-6 font-mono text-base leading-relaxed text-[#A0A8B8] space-y-4 relative">
-                <p>
+              <div className="p-6 font-mono text-base leading-relaxed space-y-4 relative">
+                <p className="text-[#D1D5DB]">
                   I am a Security Engineer working at the intersection of cloud infrastructure, identity security, and automation, with a growing focus on AI security and MLSecOps. I have supported enterprise clients across the US, Canada, Europe, and Australia, working across managed services, cloud platforms, and critical infrastructure environments.
                 </p>
-                <p>
+                <p className="text-[#D1D5DB]">
                   I am currently pursuing an MSc in Cybersecurity and a Postgraduate in GRC while holding 26+ industry certifications. Despite a deeply technical path, my roots are in the humanities. I believe the best engineers are also clear thinkers and strong communicators.
                 </p>
                 <p className="text-[#10B981] font-medium">
-                  Open to roles in Security Engineering, Cloud Security, AI Security, and Infrastructure globally.<motion.span 
-                    animate={{ opacity: [1, 0] }} 
+                  Open to roles in Security Engineering, Cloud Security, AI Security, and Infrastructure globally<motion.span
+                    animate={{ opacity: [1, 0] }}
                     transition={{ repeat: Infinity, duration: 0.8, ease: "linear" }}
                     className="inline-block w-2 h-4 bg-[#10B981] ml-1 align-middle translate-y-[-1px]"
                   />
