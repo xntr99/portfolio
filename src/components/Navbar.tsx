@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { Menu, X, Home, Briefcase, Code, Award, GraduationCap, Mail, Shield } from 'lucide-react';
+import { Menu, X, Hop as Home, Briefcase, Code, Award, GraduationCap, Mail, Shield } from 'lucide-react';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import WorldClock from './WorldClock';
