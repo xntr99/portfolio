@@ -53,7 +53,7 @@ export default function CanvasBackground() {
         if (!ctx) return;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(212, 175, 55, 0.3)';
+        ctx.fillStyle = 'rgba(0, 212, 255, 0.3)';
         ctx.fill();
       }
     }
@@ -78,7 +78,7 @@ export default function CanvasBackground() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(212, 175, 55, ${opacity})`;
+            ctx.strokeStyle = `rgba(0, 212, 255, ${opacity})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }

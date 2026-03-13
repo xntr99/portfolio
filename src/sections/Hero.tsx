@@ -36,7 +36,7 @@ export default function Hero() {
           <div className="flex flex-col xl:flex-row items-start xl:items-end justify-between gap-6 xl:gap-8 mb-8 w-full">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8">
               <motion.div variants={itemVariants} className="shrink-0">
-                <div className="w-28 h-28 md:w-36 md:h-36 rounded-2xl overflow-hidden border border-[#1C1F26] shadow-[0_0_30px_rgba(212,175,55,0.3)] relative group">
+                <div className="w-28 h-28 md:w-36 md:h-36 rounded-2xl overflow-hidden border border-[#1A2235] shadow-[0_0_30px_rgba(0,212,255,0.3)] relative group">
                   <img 
                     src="/austin.jpg" 
                     alt="Austin BC" 
@@ -45,23 +45,23 @@ export default function Hero() {
                       (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1000&auto=format&fit=crop";
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E14]/40 to-transparent opacity-80" />
-                  <div className="absolute inset-0 border-2 border-[#D4AF37]/0 group-hover:border-[#D4AF37]/50 rounded-2xl transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#080B12]/40 to-transparent opacity-80" />
+                  <div className="absolute inset-0 border-2 border-[#00D4FF]/0 group-hover:border-[#00D4FF]/50 rounded-2xl transition-colors duration-500" />
                 </div>
               </motion.div>
               
               <div className="flex flex-col">
                 <motion.div variants={itemVariants} className="flex items-center gap-2 mb-3">
                   <span className="w-2 h-2 rounded-full bg-[#10B981] shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
-                  <span className="font-mono text-xs tracking-widest text-[#9CA3AF] uppercase">
+                  <span className="font-mono text-xs tracking-widest text-[#A0A8B8] uppercase">
                     Available for Opportunities
                   </span>
                 </motion.div>
 
                 <motion.div variants={itemVariants} className="flex items-center gap-4 mb-3">
-                  <h1 className="font-display text-5xl sm:text-7xl lg:text-[80px] leading-[0.9] tracking-tight font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#3B82F6] drop-shadow-[0_0_15px_rgba(212,175,55,0.4)] flex items-center gap-4">
-                    <div className="relative flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 shadow-[0_0_25px_rgba(212,175,55,0.4)]">
-                      <Shield className="text-[#D4AF37] w-6 h-6 sm:w-8 sm:h-8" />
+                  <h1 className="font-display text-5xl sm:text-7xl lg:text-[80px] leading-[0.9] tracking-tight font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#3B82F6] drop-shadow-[0_0_15px_rgba(0,212,255,0.4)] flex items-center gap-4">
+                    <div className="relative flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-[#00D4FF]/10 border border-[#00D4FF]/30 shadow-[0_0_25px_rgba(0,212,255,0.4)]">
+                      <Shield className="text-[#00D4FF] w-6 h-6 sm:w-8 sm:h-8" />
                     </div>
                     Austin BC
                   </h1>
@@ -69,7 +69,7 @@ export default function Hero() {
 
                 <motion.h2
                   variants={itemVariants}
-                  className="font-body text-lg sm:text-xl text-[#9CA3AF]"
+                  className="font-body text-lg sm:text-xl text-[#A0A8B8]"
                 >
                   Security Engineer • Cloud • Infrastructure • Automation
                 </motion.h2>
@@ -79,25 +79,25 @@ export default function Hero() {
             {/* Buttons */}
             <motion.div variants={itemVariants} className="flex flex-col items-end gap-3 xl:pb-2">
               <div className="flex items-center gap-3">
-                <a href="https://linkedin.com/in/batulaustin" target="_blank" rel="noreferrer" className="p-2.5 rounded-md bg-[#12161E] border border-[#1C1F26] text-[#9CA3AF] hover:text-[#D4AF37] hover:border-[#D4AF37]/30 transition-all">
+                <a href="https://linkedin.com/in/batulaustin" target="_blank" rel="noreferrer" className="p-2.5 rounded-md bg-[#0B101A] border border-[#1A2235] text-[#A0A8B8] hover:text-[#00D4FF] hover:border-[#00D4FF]/30 transition-all">
                   <Linkedin size={18} />
                 </a>
-                <a href="https://batulmonarchy.github.io" target="_blank" rel="noreferrer" className="p-2.5 rounded-md bg-[#12161E] border border-[#1C1F26] text-[#9CA3AF] hover:text-[#D4AF37] hover:border-[#D4AF37]/30 transition-all">
+                <a href="https://batulmonarchy.github.io" target="_blank" rel="noreferrer" className="p-2.5 rounded-md bg-[#0B101A] border border-[#1A2235] text-[#A0A8B8] hover:text-[#00D4FF] hover:border-[#00D4FF]/30 transition-all">
                   <Github size={18} />
                 </a>
-                <a href="mailto:batulaustin.work@gmail.com" className="p-2.5 rounded-md bg-[#12161E] border border-[#1C1F26] text-[#9CA3AF] hover:text-[#D4AF37] hover:border-[#D4AF37]/30 transition-all">
+                <a href="mailto:batulaustin.work@gmail.com" className="p-2.5 rounded-md bg-[#0B101A] border border-[#1A2235] text-[#A0A8B8] hover:text-[#00D4FF] hover:border-[#00D4FF]/30 transition-all">
                   <Mail size={18} />
                 </a>
               </div>
-              <a
-                href="#experience"
-                className="px-5 py-2.5 bg-[#D4AF37] text-[#0A0E14] font-medium rounded-md hover:bg-white transition-colors text-sm w-[140px] text-center"
+              <a 
+                href="#experience" 
+                className="px-5 py-2.5 bg-[#00D4FF] text-[#080B12] font-medium rounded-md hover:bg-white transition-colors text-sm w-[140px] text-center"
               >
                 View My Work
               </a>
-              <a
-                href="#projects"
-                className="px-5 py-2.5 bg-[#12161E] border border-[#1C1F26] text-[#D4AF37] font-medium rounded-md hover:border-[#D4AF37]/50 hover:bg-[#D4AF37]/5 transition-colors text-sm w-[140px] text-center"
+              <a 
+                href="#projects" 
+                className="px-5 py-2.5 bg-[#0B101A] border border-[#1A2235] text-[#00D4FF] font-medium rounded-md hover:border-[#00D4FF]/50 hover:bg-[#00D4FF]/5 transition-colors text-sm w-[140px] text-center"
               >
                 See Projects
               </a>
@@ -106,28 +106,28 @@ export default function Hero() {
 
           {/* Roles */}
           <motion.div variants={itemVariants} className="flex flex-row flex-wrap items-center gap-3 mb-10 w-full">
-            <div className="px-4 py-1.5 rounded-full bg-[#12161E] border border-[#1C1F26] shadow-[0_0_15px_rgba(212,175,55,0.25)] font-mono text-xs text-[#9CA3AF] whitespace-nowrap">
+            <div className="px-4 py-1.5 rounded-full bg-[#0B101A] border border-[#1A2235] shadow-[0_0_15px_rgba(0,212,255,0.25)] font-mono text-xs text-[#A0A8B8] whitespace-nowrap">
               <span className="text-white font-medium">AI Security Engineer</span> • micro1
             </div>
-            <div className="px-4 py-1.5 rounded-full bg-[#12161E] border border-[#1C1F26] shadow-[0_0_15px_rgba(212,175,55,0.25)] font-mono text-xs text-[#9CA3AF] whitespace-nowrap">
+            <div className="px-4 py-1.5 rounded-full bg-[#0B101A] border border-[#1A2235] shadow-[0_0_15px_rgba(0,212,255,0.25)] font-mono text-xs text-[#A0A8B8] whitespace-nowrap">
               <span className="text-white font-medium">Cloud Security Engineer</span> • Trusted Tech
             </div>
-            <div className="px-4 py-1.5 rounded-full bg-[#12161E] border border-[#1C1F26] shadow-[0_0_15px_rgba(212,175,55,0.25)] font-mono text-xs text-[#9CA3AF] whitespace-nowrap">
+            <div className="px-4 py-1.5 rounded-full bg-[#0B101A] border border-[#1A2235] shadow-[0_0_15px_rgba(0,212,255,0.25)] font-mono text-xs text-[#A0A8B8] whitespace-nowrap">
               <span className="text-white font-medium">Founder</span> • Silicon Barracks
             </div>
           </motion.div>
 
           {/* Terminal */}
           <motion.div variants={itemVariants} className="w-full mb-10">
-            <div className="bg-[#16191F] border border-[#1C1F26] rounded-xl overflow-hidden shadow-2xl relative">
+            <div className="bg-[#151A28] border border-[#1A2235] rounded-xl overflow-hidden shadow-2xl relative">
               {/* Terminal Header */}
-              <div className="bg-[#1F2229] px-4 py-2.5 flex items-center gap-2 border-b border-[#1C1F26]">
+              <div className="bg-[#1E2536] px-4 py-2.5 flex items-center gap-2 border-b border-[#1A2235]">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-[#FF5F56]" />
                   <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
                   <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
                 </div>
-                <div className="flex-1 text-center font-mono text-sm text-[#9CA3AF] opacity-80">
+                <div className="flex-1 text-center font-mono text-sm text-[#A0A8B8] opacity-80">
                   austin@security-engineer:~
                 </div>
               </div>
@@ -156,31 +156,31 @@ export default function Hero() {
               <span className="font-display text-5xl font-black text-white">
                 <CountUp end={5} duration={2.5} />+
               </span>
-              <span className="font-body text-sm text-[#9CA3AF] mt-2">Years Experience</span>
+              <span className="font-body text-sm text-[#A0A8B8] mt-2">Years Experience</span>
             </div>
             <div className="flex flex-col items-center text-center">
               <span className="font-display text-5xl font-black text-white">
                 <CountUp end={4} duration={2.5} />+
               </span>
-              <span className="font-body text-sm text-[#9CA3AF] mt-2">Countries Served</span>
+              <span className="font-body text-sm text-[#A0A8B8] mt-2">Countries Served</span>
             </div>
             <div className="flex flex-col items-center text-center">
               <span className="font-display text-5xl font-black text-white">
                 <CountUp end={20} duration={2.5} />+
               </span>
-              <span className="font-body text-sm text-[#9CA3AF] mt-2">Certifications</span>
+              <span className="font-body text-sm text-[#A0A8B8] mt-2">Certifications</span>
             </div>
             <div className="flex flex-col items-center text-center">
               <span className="font-display text-5xl font-black text-white">
                 <CountUp end={10} duration={2.5} />
               </span>
-              <span className="font-body text-sm text-[#9CA3AF] mt-2">Projects Done</span>
+              <span className="font-body text-sm text-[#A0A8B8] mt-2">Projects Done</span>
             </div>
           </motion.div>
 
           {/* Notable Achievements Grid */}
           <motion.div variants={itemVariants} className="w-full mb-10">
-            <h3 className="font-mono text-xs uppercase tracking-widest text-[#9CA3AF] mb-4">Notable Achievements</h3>
+            <h3 className="font-mono text-xs uppercase tracking-widest text-[#A0A8B8] mb-4">Notable Achievements</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
               {[
                 { icon: GraduationCap, title: 'Summa Cum Laude', sub: 'BSIT, Holy Angel University', desc: 'Graduated with highest honors, demonstrating exceptional academic performance and dedication to the IT field.' },
@@ -196,16 +196,16 @@ export default function Hero() {
                 return (
                   <motion.div 
                     layout
-                    key={i}
+                    key={i} 
                     onMouseEnter={() => setActiveAchievement(item.title)}
                     onMouseLeave={() => setActiveAchievement(null)}
-                    className={`p-4 rounded-xl bg-[#12161E] border ${isActive ? 'border-[#D4AF37]' : 'border-[#1C1F26]'} flex flex-col gap-3 hover:border-[#D4AF37]/50 transition-colors cursor-pointer relative overflow-hidden`}
+                    className={`p-4 rounded-xl bg-[#0B101A] border ${isActive ? 'border-[#00D4FF]' : 'border-[#1A2235]'} flex flex-col gap-3 hover:border-[#00D4FF]/50 transition-colors cursor-pointer relative overflow-hidden`}
                   >
                     <motion.div layout className="flex items-start gap-3">
-                      <item.icon className="text-[#D4AF37] shrink-0 mt-0.5" size={20} strokeWidth={1.5} />
+                      <item.icon className="text-[#00D4FF] shrink-0 mt-0.5" size={20} strokeWidth={1.5} />
                       <div className="flex flex-col gap-1.5">
                         <div className="text-white font-medium text-sm leading-snug">{item.title}</div>
-                        {item.sub && <div className="text-[#9CA3AF] text-xs leading-snug">{item.sub}</div>}
+                        {item.sub && <div className="text-[#A0A8B8] text-xs leading-snug">{item.sub}</div>}
                       </div>
                     </motion.div>
                     <AnimatePresence>
@@ -214,7 +214,7 @@ export default function Hero() {
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
-                          className="text-[#9CA3AF] text-xs leading-relaxed pt-2 border-t border-[#1C1F26]"
+                          className="text-[#A0A8B8] text-xs leading-relaxed pt-2 border-t border-[#1A2235]"
                         >
                           {item.desc}
                         </motion.div>

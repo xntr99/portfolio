@@ -113,10 +113,10 @@ export default function Projects() {
           viewport={{ once: true }}
           className="mb-10"
         >
-          <h2 className="font-display text-5xl font-black text-[#D4AF37] mb-4">
+          <h2 className="font-display text-5xl font-black text-[#00D4FF] mb-4">
             Featured Projects
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#D4AF37] to-[#C9A961]" />
+          <div className="w-24 h-1 bg-gradient-to-r from-[#00D4FF] to-[#6366F1]" />
         </motion.div>
 
         <motion.div 
@@ -131,8 +131,8 @@ export default function Projects() {
               onClick={() => setFilter(category)}
               className={`px-4 py-2 rounded-full font-mono text-sm transition-all duration-300 ${
                 filter === category
-                  ? 'bg-[#D4AF37] text-black shadow-[0_0_15px_rgba(212,175,55,0.4)]'
-                  : 'bg-[#12161E] border border-[#1C1F26] text-[#9CA3AF] hover:border-[#D4AF37]/50 hover:text-[#D4AF37]'
+                  ? 'bg-[#00D4FF] text-black shadow-[0_0_15px_rgba(0,212,255,0.4)]'
+                  : 'bg-[#0B101A] border border-[#1A2235] text-[#A0A8B8] hover:border-[#00D4FF]/50 hover:text-[#00D4FF]'
               }`}
             >
               {category}
@@ -150,41 +150,41 @@ export default function Projects() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="group relative bg-[#12161E] border border-[#1C1F26] rounded-xl overflow-hidden cursor-pointer hover:border-[#D4AF37]/50 transition-all duration-500 flex flex-col h-[400px]"
+                className="group relative bg-[#0B101A] border border-[#1A2235] rounded-xl overflow-hidden cursor-pointer hover:border-[#00D4FF]/50 transition-all duration-500 flex flex-col h-[400px]"
                 onClick={() => setSelectedProject(project)}
               >
               {/* Image Container */}
               <div className="relative w-full h-[220px] group-hover:h-[120px] transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden shrink-0">
-                <img
-                  src={project.image}
-                  alt={project.title}
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#12161E] via-[#12161E]/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B101A] via-[#0B101A]/20 to-transparent" />
                 
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="font-mono text-[10px] px-2.5 py-1 bg-[#D4AF37]/10 text-[#D4AF37] rounded backdrop-blur-sm border border-[#D4AF37]/20">
+                  <span className="font-mono text-[10px] px-2.5 py-1 bg-[#00D4FF]/10 text-[#00D4FF] rounded backdrop-blur-sm border border-[#00D4FF]/20">
                     {project.category}
                   </span>
                 </div>
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col flex-grow relative bg-[#12161E] z-10 transition-all duration-500">
-                <h3 className="font-heading text-xl font-bold text-white mb-4 group-hover:text-[#D4AF37] transition-colors line-clamp-2">
+              <div className="p-6 flex flex-col flex-grow relative bg-[#0B101A] z-10 transition-all duration-500">
+                <h3 className="font-heading text-xl font-bold text-white mb-4 group-hover:text-[#00D4FF] transition-colors line-clamp-2">
                   {project.title}
                 </h3>
                 
                 {/* Tags Row - Always visible */}
                 <div className="flex flex-wrap gap-2 mb-2">
                   {project.tags.slice(0, 3).map(tag => (
-                    <span key={tag} className="font-mono text-[10px] px-2 py-1 bg-[#1C1F26] text-[#9CA3AF] rounded border border-[#2C2F36]">
+                    <span key={tag} className="font-mono text-[10px] px-2 py-1 bg-[#1A2235] text-[#A0A8B8] rounded border border-[#2A3245]">
                       {tag}
                     </span>
                   ))}
                   {project.tags.length > 3 && (
-                    <span className="font-mono text-[10px] px-2 py-1 bg-[#1C1F26] text-[#9CA3AF] rounded border border-[#2C2F36]">
+                    <span className="font-mono text-[10px] px-2 py-1 bg-[#1A2235] text-[#A0A8B8] rounded border border-[#2A3245]">
                       +{project.tags.length - 3}
                     </span>
                   )}
@@ -193,7 +193,7 @@ export default function Projects() {
                 {/* Description - Hidden by default, reveals on hover */}
                 <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]">
                   <div className="overflow-hidden">
-                    <p className="text-[#9CA3AF] text-sm line-clamp-4 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                    <p className="text-[#A0A8B8] text-sm line-clamp-4 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                       {project.description}
                     </p>
                   </div>
@@ -201,7 +201,7 @@ export default function Projects() {
               </div>
 
               {/* Hover Overlay */}
-              <div className="absolute inset-0 border-2 border-[#D4AF37] opacity-0 group-hover:opacity-100 rounded-xl pointer-events-none transition-opacity duration-500" />
+              <div className="absolute inset-0 border-2 border-[#00D4FF] opacity-0 group-hover:opacity-100 rounded-xl pointer-events-none transition-opacity duration-500" />
             </motion.div>
             ))}
           </AnimatePresence>
@@ -217,32 +217,32 @@ export default function Projects() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedProject(null)}
-              className="fixed inset-0 bg-[#0A0E14]/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 md:p-8"
+              className="fixed inset-0 bg-[#080B12]/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 md:p-8"
             >
-              <motion.div
+              <motion.div 
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                className="relative w-full max-w-4xl bg-[#12161E] border border-[#1C1F26] rounded-2xl overflow-hidden flex flex-col max-h-[90vh]"
+                className="relative w-full max-w-4xl bg-[#0B101A] border border-[#1A2235] rounded-2xl overflow-hidden flex flex-col max-h-[90vh]"
                 onClick={(e) => e.stopPropagation()}
               >
-                <button
+                <button 
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 right-4 p-2 text-[#9CA3AF] hover:text-white bg-[#1C1F26] rounded-full z-20 transition-colors"
+                  className="absolute top-4 right-4 p-2 text-[#A0A8B8] hover:text-white bg-[#1A2235] rounded-full z-20 transition-colors"
                 >
                   <X size={20} />
                 </button>
 
                 <div className="relative h-64 md:h-80 w-full shrink-0">
-                  <img
-                    src={selectedProject.image}
-                    alt={selectedProject.title}
+                  <img 
+                    src={selectedProject.image} 
+                    alt={selectedProject.title} 
                     className="w-full h-full object-cover opacity-80"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#12161E] via-[#12161E]/50 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B101A] via-[#0B101A]/50 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
-                    <div className="font-mono text-[10px] px-2.5 py-1 bg-[#D4AF37]/10 text-[#D4AF37] rounded inline-block mb-4 border border-[#D4AF37]/20">
+                    <div className="font-mono text-[10px] px-2.5 py-1 bg-[#00D4FF]/10 text-[#00D4FF] rounded inline-block mb-4 border border-[#00D4FF]/20">
                       {selectedProject.category}
                     </div>
                     <h3 className="font-heading text-3xl md:text-4xl font-bold text-white leading-tight">
@@ -253,29 +253,29 @@ export default function Projects() {
 
                 <div className="p-6 md:p-8 overflow-y-auto">
                   <div className="mb-8">
-                    <h4 className="font-heading text-sm text-[#9CA3AF] uppercase tracking-wider mb-4">Project Overview</h4>
+                    <h4 className="font-heading text-sm text-[#A0A8B8] uppercase tracking-wider mb-4">Project Overview</h4>
                     <p className="font-body text-base text-[#D1D5DB] leading-relaxed">
                       {selectedProject.description}
                     </p>
                   </div>
 
                   <div className="mb-8">
-                    <h4 className="font-heading text-sm text-[#9CA3AF] uppercase tracking-wider mb-4">Technologies Used</h4>
+                    <h4 className="font-heading text-sm text-[#A0A8B8] uppercase tracking-wider mb-4">Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
                       {selectedProject.tags.map(tag => (
-                        <span key={tag} className="font-mono text-xs text-[#D4AF37] px-3 py-1.5 bg-[#D4AF37]/10 border border-[#D4AF37]/20 rounded-md">
+                        <span key={tag} className="font-mono text-xs text-[#00D4FF] px-3 py-1.5 bg-[#00D4FF]/10 border border-[#00D4FF]/20 rounded-md">
                           {tag}
                         </span>
                       ))}
                     </div>
                   </div>
                   
-                  <div className="flex gap-4 pt-6 border-t border-[#1C1F26]">
-                    <button className="flex items-center gap-2 px-6 py-2.5 bg-[#D4AF37] text-black font-bold rounded-lg hover:bg-[#D4AF37]/90 transition-colors">
+                  <div className="flex gap-4 pt-6 border-t border-[#1A2235]">
+                    <button className="flex items-center gap-2 px-6 py-2.5 bg-[#00D4FF] text-black font-bold rounded-lg hover:bg-[#00D4FF]/90 transition-colors">
                       <ExternalLink size={18} />
                       View Project
                     </button>
-                    <button className="flex items-center gap-2 px-6 py-2.5 bg-[#1C1F26] text-white font-bold rounded-lg hover:bg-[#2C2F36] transition-colors border border-[#2C2F36]">
+                    <button className="flex items-center gap-2 px-6 py-2.5 bg-[#1A2235] text-white font-bold rounded-lg hover:bg-[#2A3245] transition-colors border border-[#2A3245]">
                       <Github size={18} />
                       Source Code
                     </button>

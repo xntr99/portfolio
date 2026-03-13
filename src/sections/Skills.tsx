@@ -173,10 +173,10 @@ export default function Skills() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="font-display text-5xl font-black text-[#D4AF37] mb-4">
+          <h2 className="font-display text-5xl font-black text-[#00D4FF] mb-4">
             Core Technical Skills
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#D4AF37] to-[#C9A961]" />
+          <div className="w-24 h-1 bg-gradient-to-r from-[#00D4FF] to-[#6366F1]" />
         </motion.div>
 
         <div className="space-y-6">
@@ -191,12 +191,12 @@ export default function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: catIndex * 0.1 }}
-                className="bg-[#12161E] border border-[#1C1F26] rounded-xl transition-colors duration-300 hover:border-[#D4AF37]/40"
+                className="bg-[#0B101A] border border-[#1A2235] rounded-xl transition-colors duration-300 hover:border-[#00D4FF]/40"
                 onMouseEnter={() => setHoveredCategory(category.title)}
                 onMouseLeave={() => setHoveredCategory(null)}
               >
                 <div className="px-6 py-5 flex items-center gap-4 cursor-pointer">
-                  <div className="p-2 rounded-lg bg-[#1C1F26]/50 text-[#D4AF37]">
+                  <div className="p-2 rounded-lg bg-[#1A2235]/50 text-[#00D4FF]">
                     <CategoryIcon size={24} />
                   </div>
                   <h3 className="font-heading text-xl font-bold text-white">
@@ -213,7 +213,7 @@ export default function Skills() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="overflow-visible"
                     >
-                      <div className="px-6 pb-6 pt-2 border-t border-[#1C1F26]/50">
+                      <div className="px-6 pb-6 pt-2 border-t border-[#1A2235]/50">
                         <div className="flex flex-wrap gap-3">
                           {category.skills.map((skill, skillIndex) => {
                             const isSimpleIcon = typeof skill.icon === 'string';
@@ -226,13 +226,13 @@ export default function Skills() {
                                   initial={{ opacity: 0, scale: 0.9 }}
                                   animate={{ opacity: 1, scale: 1 }}
                                   transition={{ delay: skillIndex * 0.02 }}
-                                  className="bg-[#16191F] border border-[#1C1F26] rounded-lg px-4 py-2.5 flex items-center gap-3 cursor-pointer hover:border-[#D4AF37]/50 hover:bg-[#D4AF37]/5 transition-all duration-300"
+                                  className="bg-[#151A28] border border-[#1A2235] rounded-lg px-4 py-2.5 flex items-center gap-3 cursor-pointer hover:border-[#00D4FF]/50 hover:bg-[#00D4FF]/5 transition-all duration-300"
                                   onClick={() => setActiveSkill(activeSkill === skill.name ? null : skill.name)}
                                   onMouseEnter={() => setActiveSkill(skill.name)}
                                   onMouseLeave={() => setActiveSkill(null)}
                                 >
                                   {/* Icon */}
-                                  <div className="w-5 h-5 flex items-center justify-center text-[#9CA3AF] group-hover:text-[#D4AF37] transition-colors">
+                                  <div className="w-5 h-5 flex items-center justify-center text-[#A0A8B8] group-hover:text-[#00D4FF] transition-colors">
                                     {isSimpleIcon && svgPath ? (
                                       <svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path d={svgPath} />
@@ -245,7 +245,7 @@ export default function Skills() {
                                   </div>
                                   
                                   {/* Label */}
-                                  <span className="font-mono text-sm text-white group-hover:text-[#D4AF37] transition-colors whitespace-nowrap">
+                                  <span className="font-mono text-sm text-white group-hover:text-[#00D4FF] transition-colors whitespace-nowrap">
                                     {skill.name}
                                   </span>
                                 </motion.div>
@@ -260,12 +260,12 @@ export default function Skills() {
                                       transition={{ duration: 0.15 }}
                                       className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-max max-w-[250px] sm:max-w-[300px] z-[100] pointer-events-none"
                                     >
-                                      <div className="bg-[#1C1F26] border border-[#D4AF37]/30 shadow-[0_10px_30px_rgba(0,0,0,0.8)] rounded-lg p-3 text-center relative">
+                                      <div className="bg-[#1A2235] border border-[#00D4FF]/30 shadow-[0_10px_30px_rgba(0,0,0,0.8)] rounded-lg p-3 text-center relative">
                                         <p className="font-body text-sm text-[#D1D5DB] leading-tight">
                                           {skill.desc}
                                         </p>
                                         {/* Triangle pointer */}
-                                        <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-[1px] border-solid border-t-[#1C1F26] border-t-8 border-x-transparent border-x-8 border-b-0" />
+                                        <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-[1px] border-solid border-t-[#1A2235] border-t-8 border-x-transparent border-x-8 border-b-0" />
                                       </div>
                                     </motion.div>
                                   )}
