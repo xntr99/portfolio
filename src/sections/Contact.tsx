@@ -21,11 +21,11 @@ export default function Contact() {
           viewport={{ once: true }}
           className="mb-12 text-center"
         >
-          <h2 className="font-display text-5xl font-black text-[#00D4FF] mb-4">
+          <h2 className="font-display text-5xl font-black text-[#D4AF37] mb-4">
             Connect With Me
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#00D4FF] to-[#6366F1] mx-auto mb-6" />
-          <p className="text-[#A0A8B8] font-body text-lg">
+          <div className="w-24 h-1 bg-gradient-to-r from-[#D4AF37] to-[#C9A961] mx-auto mb-6" />
+          <p className="text-[#9CA3AF] font-body text-lg">
             Have a question or want to work together? Send me a message.
           </p>
         </motion.div>
@@ -35,12 +35,12 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          onSubmit={handleSubmit} 
-          className="bg-[#0B101A] border border-[#1A2235] rounded-2xl p-6 md:p-8 flex flex-col gap-6"
+          onSubmit={handleSubmit}
+          className="bg-[#12161E] border border-[#1C1F26] rounded-2xl p-6 md:p-8 flex flex-col gap-6"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-2">
-              <label htmlFor="name" className="font-mono text-xs text-[#A0A8B8] uppercase tracking-wider flex items-center gap-2">
+              <label htmlFor="name" className="font-mono text-xs text-[#9CA3AF] uppercase tracking-wider flex items-center gap-2">
                 <User size={14} /> Name
               </label>
               <input 
@@ -49,7 +49,7 @@ export default function Contact() {
                 required
                 value={formData.name}
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
-                className="bg-[#080B12] border border-[#1A2235] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#00D4FF] transition-colors font-body"
+                className="bg-[#0A0E14] border border-[#1C1F26] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors font-body"
                 placeholder="John Doe"
               />
             </div>
@@ -63,7 +63,7 @@ export default function Contact() {
                 required
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
-                className="bg-[#080B12] border border-[#1A2235] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#00D4FF] transition-colors font-body"
+                className="bg-[#0A0E14] border border-[#1C1F26] rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#D4AF37] transition-colors font-body"
                 placeholder="john@example.com"
               />
             </div>
@@ -84,9 +84,9 @@ export default function Contact() {
             />
           </div>
 
-          <button 
+          <button
             type="submit"
-            className="mt-2 flex items-center justify-center gap-2 w-full py-4 bg-[#00D4FF] text-black font-bold rounded-lg hover:bg-[#00D4FF]/90 transition-colors font-heading tracking-wide"
+            className="mt-2 flex items-center justify-center gap-2 w-full py-4 bg-[#D4AF37] text-black font-bold rounded-lg hover:bg-[#D4AF37]/90 transition-colors font-heading tracking-wide"
           >
             <Send size={18} />
             Send Message

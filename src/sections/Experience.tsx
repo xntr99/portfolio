@@ -107,13 +107,13 @@ export default function Experience() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="font-display text-5xl font-black text-[#00D4FF] mb-4">
+          <h2 className="font-display text-5xl font-black text-[#D4AF37] mb-4">
             Work Experience
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#00D4FF] to-[#6366F1]" />
+          <div className="w-24 h-1 bg-gradient-to-r from-[#D4AF37] to-[#C9A961]" />
         </motion.div>
 
-        <div className="relative border-l border-[#00D4FF]/30 ml-4 md:ml-8 space-y-8">
+        <div className="relative border-l border-[#D4AF37]/30 ml-4 md:ml-8 space-y-8">
           {experiences.map((exp, index) => {
             const Icon = exp.icon;
             return (
@@ -127,13 +127,13 @@ export default function Experience() {
                 onClick={() => setSelectedExp(exp)}
               >
                 {/* Timeline Node */}
-                <div className="absolute -left-[5px] top-8 w-2.5 h-2.5 rounded-full bg-[#00D4FF] shadow-[0_0_10px_rgba(0,212,255,0.8)] group-hover:scale-150 transition-transform duration-300" />
+                <div className="absolute -left-[5px] top-8 w-2.5 h-2.5 rounded-full bg-[#D4AF37] shadow-[0_0_10px_rgba(212,175,55,0.8)] group-hover:scale-150 transition-transform duration-300" />
 
-                <div className="bg-[#0B101A] border border-[#1A2235] rounded-xl p-6 flex flex-col md:flex-row gap-6 hover:border-[#00D4FF]/50 hover:bg-[#00D4FF]/5 transition-all duration-300">
+                <div className="bg-[#12161E] border border-[#1C1F26] rounded-xl p-6 flex flex-col md:flex-row gap-6 hover:border-[#D4AF37]/50 hover:bg-[#D4AF37]/5 transition-all duration-300">
                   
                   {/* Icon Box */}
                   <div className="shrink-0">
-                    <div className="w-12 h-12 rounded-xl bg-[#00D4FF]/10 flex items-center justify-center text-[#00D4FF] group-hover:bg-[#00D4FF]/20 group-hover:scale-110 transition-all duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#D4AF37]/20 group-hover:scale-110 transition-all duration-300">
                       <Icon size={24} strokeWidth={1.5} />
                     </div>
                   </div>
@@ -142,21 +142,21 @@ export default function Experience() {
                   <div className="flex-grow flex flex-col justify-center">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
                       <div>
-                        <h3 className="font-heading text-xl font-bold text-white mb-1 group-hover:text-[#00D4FF] transition-colors">
+                        <h3 className="font-heading text-xl font-bold text-white mb-1 group-hover:text-[#D4AF37] transition-colors">
                           {exp.role}
                         </h3>
-                        <div className="text-[#A0A8B8] text-sm">
+                        <div className="text-[#9CA3AF] text-sm">
                           {exp.company}
                         </div>
                       </div>
                       
                       <div className="flex items-center gap-3 shrink-0">
                         {exp.current && (
-                          <span className="font-mono text-[10px] px-2 py-1 bg-[#00D4FF]/10 text-[#00D4FF] rounded">
+                          <span className="font-mono text-[10px] px-2 py-1 bg-[#D4AF37]/10 text-[#D4AF37] rounded">
                             Current
                           </span>
                         )}
-                        <span className="font-mono text-xs text-[#A0A8B8]">
+                        <span className="font-mono text-xs text-[#9CA3AF]">
                           {exp.date}
                         </span>
                       </div>
@@ -164,16 +164,16 @@ export default function Experience() {
 
                     {/* Badges */}
                     <div className="flex flex-wrap gap-2">
-                      <span className="font-mono text-[10px] px-2.5 py-1 bg-[#6366F1]/15 text-[#818CF8] rounded">
+                      <span className="font-mono text-[10px] px-2.5 py-1 bg-[#C9A961]/15 text-[#C9A961] rounded">
                         {exp.type}
                       </span>
-                      <span className="font-mono text-[10px] px-2.5 py-1 bg-white/5 text-[#A0A8B8] rounded">
+                      <span className="font-mono text-[10px] px-2.5 py-1 bg-white/5 text-[#9CA3AF] rounded">
                         {exp.location}
                       </span>
                     </div>
 
                     {/* Hover Indicator */}
-                    <div className="mt-4 flex items-center gap-1.5 text-[#00D4FF] font-mono text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                    <div className="mt-4 flex items-center gap-1.5 text-[#D4AF37] font-mono text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
                       Click to view details <ArrowRight size={14} />
                     </div>
                   </div>
@@ -194,35 +194,35 @@ export default function Experience() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedExp(null)}
-              className="fixed inset-0 bg-[#080B12]/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 md:p-8"
+              className="fixed inset-0 bg-[#0A0E14]/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 md:p-8"
             >
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                className="relative w-full max-w-2xl bg-[#0B101A] border border-[#1A2235] rounded-2xl overflow-hidden flex flex-col max-h-[90vh]"
+                className="relative w-full max-w-2xl bg-[#12161E] border border-[#1C1F26] rounded-2xl overflow-hidden flex flex-col max-h-[90vh]"
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="p-6 md:p-8 overflow-y-auto">
-                  <button 
+                  <button
                     onClick={() => setSelectedExp(null)}
-                    className="absolute top-4 right-4 p-2 text-[#A0A8B8] hover:text-white bg-[#1A2235] rounded-full z-20 transition-colors"
+                    className="absolute top-4 right-4 p-2 text-[#9CA3AF] hover:text-white bg-[#1C1F26] rounded-full z-20 transition-colors"
                   >
                     <X size={20} />
                   </button>
-                  
+
                   <div className="mt-2 mb-8 pr-8">
                     <h3 className="font-heading text-3xl font-bold text-white mb-2">{selectedExp.role}</h3>
-                    <div className="font-heading text-xl text-[#00D4FF] mb-4">{selectedExp.company}</div>
-                    <div className="font-mono text-sm text-[#A0A8B8] mb-2">{selectedExp.date}</div>
-                    <div className="font-mono text-xs text-[#A0A8B8]">{selectedExp.type} &middot; {selectedExp.location}</div>
+                    <div className="font-heading text-xl text-[#D4AF37] mb-4">{selectedExp.company}</div>
+                    <div className="font-mono text-sm text-[#9CA3AF] mb-2">{selectedExp.date}</div>
+                    <div className="font-mono text-xs text-[#9CA3AF]">{selectedExp.type} &middot; {selectedExp.location}</div>
                   </div>
 
                   <div className="space-y-4">
                     {selectedExp.bullets.map((bullet, i) => (
                       <div key={i} className="flex gap-4">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#6366F1] mt-2.5 shrink-0 shadow-[0_0_8px_rgba(99,102,241,0.8)]" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#C9A961] mt-2.5 shrink-0 shadow-[0_0_8px_rgba(201,169,97,0.8)]" />
                         <p className="font-body text-[#D1D5DB] leading-relaxed">{bullet}</p>
                       </div>
                     ))}

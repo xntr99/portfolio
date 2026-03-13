@@ -36,7 +36,7 @@ export default function App() {
   }, [homeInView, expInView, projInView, skillsInView, certsInView, contactInView]);
 
   return (
-    <div className="relative min-h-screen bg-[#080B12] text-[#A0A8B8] font-body selection:bg-[#00D4FF]/30 selection:text-[#F0EEE9]">
+    <div className="relative min-h-screen bg-[#0A0E14] text-[#9CA3AF] font-body selection:bg-[#D4AF37]/30 selection:text-[#E6E6E6]">
       {/* Global Backgrounds */}
       <CanvasBackground />
       <div className="scanlines" />
