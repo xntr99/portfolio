@@ -103,20 +103,20 @@ export default function Certifications() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="font-display text-5xl font-black text-[#00D4FF] mb-4">
+          <h2 className="font-display text-5xl font-black text-[#D4AF37] mb-4">
             Education & Certifications
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#00D4FF] to-[#6366F1]" />
+          <div className="w-24 h-1 bg-gradient-to-r from-[#D4AF37] to-[#C9A961]" />
         </motion.div>
 
         {/* Education Timeline */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
           <div>
             <h3 className="font-display text-4xl font-bold text-white mb-12 flex items-center gap-4">
-              <GraduationCap className="text-[#00D4FF]" size={40} />
+              <GraduationCap className="text-[#D4AF37]" size={40} />
               Education
             </h3>
-            <div className="relative border-l border-[#00D4FF]/30 ml-4 space-y-8">
+            <div className="relative border-l border-[#D4AF37]/30 ml-4 space-y-8">
               {education.map((edu, index) => (
                 <motion.div 
                   key={edu.id}
@@ -128,13 +128,13 @@ export default function Certifications() {
                   onMouseEnter={() => setExpandedEdu(edu.id)}
                   onMouseLeave={() => setExpandedEdu(null)}
                 >
-                  <div className="absolute -left-[5px] top-8 w-2.5 h-2.5 rounded-full bg-[#00D4FF] shadow-[0_0_10px_rgba(0,212,255,0.8)] group-hover:scale-150 transition-transform duration-300" />
-                  
-                  <div className="bg-[#0B101A] border border-[#1A2235] rounded-xl p-6 hover:border-[#00D4FF]/50 hover:bg-[#00D4FF]/5 transition-all duration-300">
-                    <span className="font-mono text-sm text-[#00D4FF] mb-2 block">{edu.date}</span>
-                    <h4 className="font-heading text-2xl font-bold text-white mb-2 group-hover:text-[#00D4FF] transition-colors">{edu.degree}</h4>
-                    <p className="font-body text-lg text-[#A0A8B8] mb-2">{edu.school}</p>
-                    <p className="font-mono text-sm text-[#6366F1] font-semibold mb-2">{edu.highlight}</p>
+                  <div className="absolute -left-[5px] top-8 w-2.5 h-2.5 rounded-full bg-[#D4AF37] shadow-[0_0_10px_rgba(212,175,55,0.8)] group-hover:scale-150 transition-transform duration-300" />
+
+                  <div className="bg-[#12161E] border border-[#1C1F26] rounded-xl p-6 hover:border-[#D4AF37]/50 hover:bg-[#D4AF37]/5 transition-all duration-300">
+                    <span className="font-mono text-sm text-[#D4AF37] mb-2 block">{edu.date}</span>
+                    <h4 className="font-heading text-2xl font-bold text-white mb-2 group-hover:text-[#D4AF37] transition-colors">{edu.degree}</h4>
+                    <p className="font-body text-lg text-[#9CA3AF] mb-2">{edu.school}</p>
+                    <p className="font-mono text-sm text-[#C9A961] font-semibold mb-2">{edu.highlight}</p>
                     
                     <AnimatePresence>
                       {expandedEdu === edu.id && (
@@ -144,8 +144,8 @@ export default function Certifications() {
                           exit={{ height: 0, opacity: 0 }}
                           className="overflow-hidden"
                         >
-                          <div className="pt-4 mt-4 border-t border-[#1A2235]">
-                            <p className="font-mono text-xs text-[#A0A8B8] mb-2">{edu.location}</p>
+                          <div className="pt-4 mt-4 border-t border-[#1C1F26]">
+                            <p className="font-mono text-xs text-[#9CA3AF] mb-2">{edu.location}</p>
                             <p className="font-body text-white leading-relaxed">{edu.details}</p>
                           </div>
                         </motion.div>
@@ -160,7 +160,7 @@ export default function Certifications() {
           {/* Affiliations */}
           <div>
             <h3 className="font-display text-4xl font-bold text-white mb-12 flex items-center gap-4">
-              <Award className="text-[#6366F1]" size={40} />
+              <Award className="text-[#C9A961]" size={40} />
               Professional Affiliations
             </h3>
             <div className="space-y-6">
@@ -171,11 +171,11 @@ export default function Certifications() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-[#0B101A] border border-[#1A2235] rounded-xl p-6 border-l-4 border-l-[#6366F1] hover:border-[#6366F1]/50 hover:bg-[#6366F1]/5 transition-all duration-300"
+                  className="bg-[#12161E] border border-[#1C1F26] rounded-xl p-6 border-l-4 border-l-[#C9A961] hover:border-[#C9A961]/50 hover:bg-[#C9A961]/5 transition-all duration-300"
                 >
                   <h4 className="font-heading text-xl font-bold text-white mb-2">{affil.org}</h4>
-                  <div className="flex justify-between items-center font-mono text-sm text-[#A0A8B8]">
-                    <span className="text-[#6366F1]">{affil.role}</span>
+                  <div className="flex justify-between items-center font-mono text-sm text-[#9CA3AF]">
+                    <span className="text-[#C9A961]">{affil.role}</span>
                     <span>{affil.date}</span>
                   </div>
                 </motion.div>
@@ -191,9 +191,9 @@ export default function Certifications() {
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`font-mono text-sm px-6 py-2 rounded-full transition-all duration-300 ${
-                activeCategory === cat 
-                  ? 'bg-[#00D4FF] text-black font-bold shadow-[0_0_15px_rgba(0,212,255,0.5)]' 
-                  : 'bg-[#0B101A] border border-[#1A2235] text-[#A0A8B8] hover:text-white hover:border-[#00D4FF]/50'
+                activeCategory === cat
+                  ? 'bg-[#D4AF37] text-black font-bold shadow-[0_0_15px_rgba(212,175,55,0.5)]'
+                  : 'bg-[#12161E] border border-[#1C1F26] text-[#9CA3AF] hover:text-white hover:border-[#D4AF37]/50'
               }`}
             >
               {cat}
@@ -218,9 +218,9 @@ export default function Certifications() {
                   transition={{ duration: 0.3 }}
                   key={cert.id}
                   onClick={() => setSelectedCert(cert)}
-                  className="bg-[#0B101A] border border-[#1A2235] rounded-xl p-6 flex flex-col items-center text-center cursor-pointer group hover:border-[#00D4FF]/50 hover:bg-[#00D4FF]/5 transition-all duration-300"
+                  className="bg-[#12161E] border border-[#1C1F26] rounded-xl p-6 flex flex-col items-center text-center cursor-pointer group hover:border-[#D4AF37]/50 hover:bg-[#D4AF37]/5 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 mb-6 flex items-center justify-center text-[#A0A8B8] group-hover:text-[#00D4FF] transition-colors">
+                  <div className="w-16 h-16 mb-6 flex items-center justify-center text-[#9CA3AF] group-hover:text-[#D4AF37] transition-colors">
                     {svgPath ? (
                       <svg role="img" viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
                         <path d={svgPath} />
@@ -229,11 +229,11 @@ export default function Certifications() {
                       <Award size={48} strokeWidth={1.5} />
                     )}
                   </div>
-                  <h3 className="font-heading text-lg font-bold text-white mb-2 group-hover:text-[#00D4FF] transition-colors">
+                  <h3 className="font-heading text-lg font-bold text-white mb-2 group-hover:text-[#D4AF37] transition-colors">
                     {cert.name}
                   </h3>
-                  <p className="font-body text-sm text-[#A0A8B8] mb-4">{cert.issuer}</p>
-                  <span className="font-mono text-xs px-3 py-1 bg-[#1A2235] border border-[#2A3245] rounded-full text-[#00D4FF] mt-auto">
+                  <p className="font-body text-sm text-[#9CA3AF] mb-4">{cert.issuer}</p>
+                  <span className="font-mono text-xs px-3 py-1 bg-[#1C1F26] border border-[#2C2F36] rounded-full text-[#D4AF37] mt-auto">
                     {cert.category}
                   </span>
                 </motion.div>
@@ -251,23 +251,23 @@ export default function Certifications() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedCert(null)}
-            className="fixed inset-0 bg-[#080B12]/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-[#0A0E14]/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
           >
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative w-full max-w-md bg-[#0B101A] border border-[#1A2235] rounded-2xl p-8 text-center"
+              className="relative w-full max-w-md bg-[#12161E] border border-[#1C1F26] rounded-2xl p-8 text-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <button 
+              <button
                 onClick={() => setSelectedCert(null)}
-                className="absolute top-4 right-4 p-2 text-[#A0A8B8] hover:text-white bg-[#1A2235] rounded-full transition-colors"
+                className="absolute top-4 right-4 p-2 text-[#9CA3AF] hover:text-white bg-[#1C1F26] rounded-full transition-colors"
               >
                 <X size={20} />
               </button>
 
-              <div className="w-24 h-24 mx-auto mb-8 flex items-center justify-center text-[#00D4FF]">
+              <div className="w-24 h-24 mx-auto mb-8 flex items-center justify-center text-[#D4AF37]">
                 {getIconPath(selectedCert.icon) ? (
                   <svg role="img" viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
                     <path d={getIconPath(selectedCert.icon)} />
@@ -280,16 +280,16 @@ export default function Certifications() {
               <h3 className="font-heading text-3xl font-bold text-white mb-4">
                 {selectedCert.name}
               </h3>
-              
-              <div className="font-body text-xl text-[#A0A8B8] mb-8">
+
+              <div className="font-body text-xl text-[#9CA3AF] mb-8">
                 Issued by <span className="text-white font-medium">{selectedCert.issuer}</span>
               </div>
 
-              <a 
+              <a
                 href={selectedCert.verifyLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#00D4FF] text-black font-heading font-bold uppercase tracking-wider rounded-lg hover:bg-[#00D4FF]/90 transition-colors"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#D4AF37] text-black font-heading font-bold uppercase tracking-wider rounded-lg hover:bg-[#D4AF37]/90 transition-colors"
               >
                 Verify Credential <ExternalLink size={18} />
               </a>

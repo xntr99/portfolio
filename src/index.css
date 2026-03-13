@@ -6,13 +6,13 @@
   --font-body: "Satoshi", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "DM Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --color-base: #080B12;
+  --color-base: #0A0E14;
   --color-surface: rgba(255, 255, 255, 0.04);
   --color-surface-border: rgba(255, 255, 255, 0.08);
-  --color-text-primary: #F0EEE9;
-  --color-text-body: #A0A8B8;
-  --color-accent-primary: #00D4FF;
-  --color-accent-secondary: #6366F1;
+  --color-text-primary: #E6E6E6;
+  --color-text-body: #9CA3AF;
+  --color-accent-primary: #D4AF37;
+  --color-accent-secondary: #C9A961;
 }
 
 @layer base {
@@ -36,8 +36,8 @@
       to bottom,
       transparent 0,
       transparent 2px,
-      rgba(0, 212, 255, 0.03) 2px,
-      rgba(0, 212, 255, 0.03) 4px
+      rgba(212, 175, 55, 0.03) 2px,
+      rgba(212, 175, 55, 0.03) 4px
     );
     pointer-events: none;
     position: fixed;
